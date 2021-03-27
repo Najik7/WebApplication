@@ -1,0 +1,29 @@
+﻿@model List<WebApplication.Models.Customers> 
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <table class = "table">
+        <tr>
+            <td>Id</td>
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>MidlleName</td>
+            <td>DateOfBirth</td>
+            <td>DocumentNumber</td>
+        </tr>
+        @foreach (var customers in Model)
+        {
+            <tr>
+                <td>@customers.Id</td>
+                <td>@customers.FirstName</td>
+                <td>@customers.LastName</td>
+                <td>@customers.MidlleName</td>
+                <td>@customers.DateOfBirth</td>
+                <td>@customers.DocumentNumber</td>
+            </tr>
+        }
+    </table>
+        
+</div>
